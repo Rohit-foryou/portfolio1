@@ -34,13 +34,10 @@ body {
 }
 
 nav{
-    position: fixed;
     display: flex;  /*make it a flexbox*/
     align-items: center; 
     justify-content:space-between; /*to give gap b/w logo and list elements*/
     flex-wrap: wrap;
-    margin-left: 217px;
-    z-index: 1000;
 }
 
 .logo{
@@ -51,7 +48,6 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 30px 30px;
-    text-decoration: solid;
 }
 
 nav ul li a{
@@ -95,7 +91,7 @@ nav ul li a:hover::after{
 
 #about{
     padding: 80px 0;
-    color: white;
+    color: #ababab;
 }
 
 .row{
@@ -179,35 +175,53 @@ nav ul li a:hover::after{
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    width: 33.33%; /* Set each skill item to take up 33.33% of the container width */
-    box-sizing: border-box; /* Include padding and border in the total width calculation */
 }
 
 .skill-item i {
-    font-size: 70px; /* Increase the size of the logo */
+    font-size: 32px; /* Increase the size of the logo */
     margin-right: 10px;
-    color: white;
 }
 
 .skill-item span {
-    font-size: 18px;
+    font-size: 18px; /* Set font size for skill names */
     color: white;
-    margin-left: 60px;
 }
 
+.skill-item i{
+    color: white;
+}
 
+/* Add styles for skill items */
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 50%; /* Set each skill item to take up 50% of the container width */
+}
 
-/* Add more styles for other skills as needed */
+.skill-item i {
+    font-size: 32px; /* Increase the size of the logo */
+    margin-right: 10px;
+}
 
-/* Set each skill item to take up 100% of the container width on smaller screens */
-/* Add more styles for other skills as needed */
+.skill-item span {
+    font-size: 18px; /* Set font size for skill names */
+    color: white;
+}
 
-/* Set each skill item to take up 100% of the container width on smaller screens */
+.tab-contents.active-tab {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+/* Set each skill item to take up 50% of the container width on smaller screens */
 @media only screen and (max-width: 600px) {
     .skill-item {
         width: 100%;
     }
 }
+
+
 
 /* Increase the size of specific icons like SQL and Power BI */
 .skill-item i.fa-brands.fa-database,
@@ -215,18 +229,28 @@ nav ul li a:hover::after{
     font-size: 36px; /* Increase the size of SQL and Power BI icons */
 }
 
-.tab-contents ul li i.fa-brands.fa-html5 + span,
-.tab-contents ul li i.fa-brands.fa-css3-alt + span,
-.tab-contents ul li i.fa-brands.fa-react + span,
+
+.tab-contents ul li i.fa-brands.fa-html5 + span {
+    font-size: 18px; /* Adjust the font size for HTML skills */
+}
+
+.tab-contents ul li i.fa-brands.fa-css3-alt + span {
+    font-size: 18px; /* Adjust the font size for CSS skills */
+}
+
+.tab-contents ul li i.fa-brands.fa-react + span {
+    font-size: 18px; /* Adjust the font size for React skills */
+}
+
 .tab-contents ul li i.fa-solid.fa-c + span {
-    font-size: 24px; /* Adjust the font size for HTML, CSS, React, C++ skills */
+    font-size: 18px; /* Adjust the font size for C++ skills */
 }
 
 /* Add more styles for other skills as needed */
 
-.tab-contents.active-tab {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+
+.tab-contents.active-tab{
+    display: block;
 }
 
 /* ----services----- */
@@ -298,7 +322,6 @@ nav ul li a:hover::after{
     border-radius: 10px;
     display: block;
     transition: tansform 0.5s;
-    height: 100%;
 }
 
 .layer{
